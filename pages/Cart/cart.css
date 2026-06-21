@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    background-image: url("../background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 {
+    margin: 0;
+    color: rgb(253, 172, 95);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    color: rgb(253, 172, 95);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(253, 172, 95);
+    padding-bottom: 10px;
+}
+
+/* Cart Container */
+.cart-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cart Items Section */
+.cart-items-section {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.item-info h3 {
+    margin: 0 0 5px 0;
+    color: rgb(253, 172, 95);
+    font-size: 16px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.item-info {
+    flex: 1;
+    min-width: 150px;
+}
+
+.item-price {
+    margin: 0;
+    color: rgb(105, 105, 105);
+    font-size: 14px;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.qty-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.qty-btn:hover {
+    background-color: rgb(253, 172, 95);
+    color: white;
+}
+
+.qty-input {
+    width: 50px;
+    padding: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.qty-input:focus {
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.item-total {
+    margin: 0;
+    font-weight: bold;
+    color: rgb(253, 172, 95);
+    font-size: 15px;
+    min-width: 80px;
+    text-align: right;
+}
+
+.btn-remove {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.btn-remove:hover {
+    background-color: #cc0000;
+}
+
+/* Cart Summary */
+.cart-summary {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    min-width: 280px;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(105, 105, 105);
+    font-size: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-row.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(253, 172, 95);
+    border: none;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(253, 172, 95);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+}
+
+.btn-checkout:hover {
+    background-color: rgb(240, 150, 70);
+    transform: translateY(-2px);
+}
+
+.btn-clear {
+    width: 100%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    color: rgb(105, 105, 105);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-clear:hover {
+    background-color: #d0d0d0;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.empty-cart-message i {
+    font-size: 80px;
+    color: rgb(253, 172, 95);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-cart-message p {
+    font-size: 20px;
+    color: rgb(105, 105, 105);
+    margin: 0 0 30px 0;
+}
+
+.btn-continue-shopping {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: rgb(253, 172, 95);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.btn-continue-shopping:hover {
+    background-color: rgb(240, 150, 70);
+    transform: translateY(-2px);
+}
+
+/* Cart Notification */
+.cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(253, 172, 95);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cart-notification.show {
+    opacity: 1;
+}
+
+/* Cart Badge */
+.cart-badge {
+    display: inline-block;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cart-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cart-items-section {
+        flex: 1;
+    }
+
+    .cart-summary {
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        gap: 15px;
+        padding: 15px;
+        margin: 25px auto;
+    }
+
+    .cart-items-section,
+    .cart-summary {
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .item-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .item-total {
+        text-align: left;
+        width: 100%;
+    }
+
+    .btn-remove {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .summary-row {
+        font-size: 14px;
+    }
+
+    .summary-row.total {
+        font-size: 16px;
+    }
+
+    .btn-checkout,
+    .btn-clear {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-container {
+        gap: 10px;
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .cart-items-section,
+    .cart-summary {
+        padding: 12px;
+    }
+
+    .cart-item {
+        padding: 10px;
+    }
+
+    .item-info h3 {
+        font-size: 14px;
+    }
+
+    .quantity-control {
+        gap: 5px;
+    }
+
+    .qty-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .qty-input {
+        width: 40px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .item-total {
+        font-size: 13px;
+    }
+
+    .btn-remove {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .empty-cart-message {
+        margin: 40px 10px;
+        padding: 20px;
+    }
+
+    .empty-cart-message i {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+    .empty-cart-message p {
+        font-size: 16px;
+    }
+
+    .cart-notification {
+        bottom: 10px;
+        right: 10px;
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+}

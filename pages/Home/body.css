@@ -1,0 +1,205 @@
+
+/* Home page cover*/
+body{
+    margin: 0;
+    background-image: url("../background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.Home_content{
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 70px;
+    box-sizing: border-box;
+}
+
+.hero-copy{
+    max-width: 560px;
+}
+
+.hero-brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 84px;
+    margin-bottom: 4px;
+}
+
+.hero-brand img{
+    margin-left: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.hero-brand span{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(253, 172, 95);
+    font-weight: bold;
+}
+
+.Home_content h1{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    line-height: 0.95;
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
+}
+
+.Home_content .color{
+    color: rgb(253, 172, 95);
+}
+
+.subtext{
+    margin: 18px 0 0;
+    max-width: 520px;
+    color: rgb(2, 2, 2);
+    font-size: 18px;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.hero-visual{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-visual img{
+    width: min(100%, 540px);
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* logo position */
+.logo2 a{
+    display:flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items:center;
+}
+
+.logo2 img{
+    margin-left: -10px;
+    margin-bottom: -20px;
+    height: 60px;
+    width: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+}
+
+.logo2 span{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(253, 172, 95);
+    font-weight: bold;
+    margin-left: -10px;
+}
+
+li{
+    list-style: none;
+}
+
+/* Tablet media query */
+@media (max-width: 1024px){
+    .Home_content{
+        gap: 30px;
+        padding: 40px 40px;
+    }
+
+    .Home_content h1{
+        font-size: 56px;
+    }
+
+    .subtext{
+        font-size: 16px;
+    }
+
+    .hero-visual img{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Mobile media query */
+@media (max-width: 768px){
+    .Home_content{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px 40px;
+        gap: 20px;
+    }
+
+    .hero-copy{
+        max-width: 100%;
+    }
+
+    .Home_content h1{
+        font-size: 44px;
+        line-height: 1.1;
+    }
+
+    .subtext{
+        font-size: 15px;
+        margin: 12px auto 0;
+    }
+
+    .hero-visual img{
+        width: 100%;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .hero-brand{
+        margin-top: 60px;
+        justify-content: center;
+    }
+}
+
+/* Small mobile media query */
+@media (max-width: 480px){
+    .Home_content{
+        padding: 20px 15px 30px;
+        gap: 15px;
+    }
+
+    .Home_content h1{
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .subtext{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .hero-visual img{
+        width: 100%;
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    .hero-brand{
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .hero-brand img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-brand span{
+        font-size: 16px;
+    }
+}

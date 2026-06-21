@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Restaurant X</title>
+
+  <link rel="stylesheet" href="../navbar.css">
+  <link rel="stylesheet" href="./card.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="navbar">
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <ul>
+      <li class="logo">
+        <a href="../Home/index.html">
+          <img src="../logo.png" alt="Logo" width="50" height="50">
+          <span>Restaurant X</span>
+        </a>
+      </li>
+      <li><a class="shade" href="../Home/index.html">Home</a></li>
+      <li><a class="shade" href="../Menu/Menu.html">Menu</a></li>
+      <li><a class="shade" href="../Gallery/Gallery.html">Gallery</a></li>
+      <li><a class="shade" href="../Contact/Contact.html">Contact</a></li>
+      <li>
+  <a class="shade" href="../Cart/cart.html">
+  <i class="fas fa-shopping-cart"></i> Cart
+</a>
+</li>
+    </ul>
+  </div>
+
+  <h1>Menu Items</h1>
+
+  <h2>Main Courses</h2>
+  <div class="menu-container">
+    <div class="card">
+      <img src="./items/Cheeseburger.png" alt="Burger">
+      <div class="card-content">
+        <h4><b>Classic Cheese Burger Combo</b></h4>
+        <p>Melted cheese on top of a fresh beef patty</p>
+        <span class="price">$12.99</span>
+        <button class="btn-add-to-cart" data-id="burger-1" data-name="Classic Cheese Burger Combo" data-price="12.99">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./items/Pasta.png" alt="Pasta">
+      <div class="card-content">
+        <h4><b>Pasta</b></h4>
+        <p>Creamy delight pasta</p>
+        <span class="price">$14.99</span>
+        <button class="btn-add-to-cart" data-id="pasta-1" data-name="Pasta" data-price="14.99">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./items/Pizza.png" alt="Pizza">
+      <div class="card-content">
+        <h4><b>12' Cheese pizza</b></h4>
+        <p>Fresh and Classic cheese pizza</p>
+        <span class="price">$11.99</span>
+        <button class="btn-add-to-cart" data-id="pizza-1" data-name="12' Cheese Pizza" data-price="11.99">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Drinks</h2>
+  <div class="menu-container">
+    <div class="card">
+      <img src="./items/coca-cola.png" alt="Coca-Cola">
+      <div class="card-content">
+        <h4><b>Coca-Cola</b></h4>
+        <p>Classic coke</p>
+        <span class="price">$2.99</span>
+        <button class="btn-add-to-cart" data-id="coke-1" data-name="Coca-Cola" data-price="2.99">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./items/sprite.png" alt="Sprite">
+      <div class="card-content">
+        <h4><b>Sprite</b></h4>
+        <p>classic sprite</p>
+        <span class="price">$2.49</span>
+        <button class="btn-add-to-cart" data-id="sprite-1" data-name="Sprite" data-price="2.49">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./items/oj.png" alt="Orange Juice">
+      <div class="card-content">
+        <h4><b>Orange Juice</b></h4>
+        <p>Made from fresh oranges</p>
+        <span class="price">$2.99</span>
+        <button class="btn-add-to-cart" data-id="oj-1" data-name="Orange Juice" data-price="2.99">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Cart/cart.js"></script>
+
+  <script>
+    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        cart.addItem(
+          button.dataset.id,
+          button.dataset.name,
+          button.dataset.price
+        );
+      });
+    });
+  </script>
+</body>
+</html>

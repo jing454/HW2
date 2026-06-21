@@ -1,0 +1,251 @@
+
+/*background color*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Hamburger menu checkbox */
+#nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(253, 172, 95);
+    transition: 0.3s;
+}
+
+/*navbar itself*/
+.navbar ul{
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid rgb(0, 0, 0);
+    display:flex;
+    justify-content:center;
+    gap: 80px;
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    min-height: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 9999;
+}
+
+/*navbar links*/
+.navbar a{
+    color: rgb(253, 172, 95);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    left: -65px;
+}
+
+/* navbar hover effect */
+.shade:hover{
+    padding: 23px;
+    background-color: rgb(105, 105, 105);
+}
+
+
+/* logo position */
+.logo a{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items:center;
+}
+
+.logo img{
+    margin-left: 40px;
+    height: 60px;
+    width: 60px;
+    flex-wrap: wrap;
+}
+
+.logo span{
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(253, 172, 95);
+    font-weight: bold;
+}
+/* Cart Badge */
+.cart-badge {
+    display: inline-block;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.cart-badge {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Tablet media query */
+@media (max-width: 1024px) {
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .navbar a {
+        left: -40px;
+        font-size: 13px;
+    }
+
+    .logo img {
+        margin-left: 20px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+}
+
+/* Mobile media query */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+        border-top: 1px solid rgb(0, 0, 0);
+        border-bottom: 1px solid rgb(0, 0, 0);
+        border-left: 1px solid rgb(0, 0, 0);
+        border-right: 1px solid rgb(0, 0, 0);
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        min-height: auto;
+    }
+
+    #nav-toggle:checked ~ ul {
+        max-height: 400px;
+    }
+
+    .navbar li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 15px 20px;
+        left: 0;
+        color: rgb(253, 172, 95);
+        font-size: 14px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .shade:hover {
+        padding: 15px 20px;
+        background-color: rgb(105, 105, 105);
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo a {
+        gap: 8px;
+    }
+
+    .logo img {
+        margin-left: 15px;
+        height: 45px;
+        width: 45px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+    }
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 15px;
+    }
+
+    .navbar-logo img {
+        height: 45px;
+        width: 45px;
+        margin-left: 0;
+    }
+
+    .navbar-logo span {
+        font-size: 14px;
+        font-family: "Bebas Neue", sans-serif;
+        color: rgb(253, 172, 95);
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .logo img {
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
