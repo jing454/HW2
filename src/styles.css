@@ -180,32 +180,41 @@ h2 {
 
 .hero-copy {
   max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 84px;
-  margin-bottom: 4px;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .logo2 {
   display: flex;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
+  justify-content: center;
 }
 
 .logo2 img {
-  margin-left: -10px;
-  margin-bottom: -20px;
-  height: 60px;
-  width: 60px;
+  display: block;
+  margin: 0;
+  width: clamp(48px, 6vw, 64px);
+  height: auto;
 }
 
 .logo2 span {
-  margin-left: -10px;
+  margin-left: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.35rem);
+  line-height: 1;
 }
 
 .Home_content h1 {
@@ -1032,7 +1041,7 @@ h2 {
   }
 
   .hero-brand {
-    margin-top: 60px;
+    margin-top: 0;
     justify-content: center;
   }
 
@@ -1164,14 +1173,19 @@ h2 {
   }
 
   .hero-brand {
-    margin-top: 40px;
+    margin-top: 0;
     margin-bottom: 0;
+    width: 100%;
+    justify-content: center;
   }
 
-  .hero-brand img,
   .logo2 img {
-    width: 50px;
-    height: 50px;
+    width: clamp(42px, 14vw, 50px);
+  }
+
+  .hero-brand .logo2 span {
+    display: inline;
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
   }
 
   .menu-container {
